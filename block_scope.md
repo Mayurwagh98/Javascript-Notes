@@ -74,6 +74,7 @@ console.log(b); // 100
 ```
 
 - In the above example `b` was not shadowed as both `b`s were present in the different scopes
+<img width="1432" alt="Screenshot 2025-05-06 at 01 39 02" src="https://github.com/user-attachments/assets/31100ae6-b648-4922-82a6-ddee2b446d6f" />
 
 ### Illegal Shadowing
 
@@ -85,6 +86,7 @@ let a = 100;
   var a = 10; // Syntax error: Identifier a has already been declared`
 }
 ```
+<img width="1432" alt="Screenshot 2025-05-06 at 01 39 35" src="https://github.com/user-attachments/assets/e882f816-7f54-40c5-b4ff-dbfacb222818" />
 
 ### Legal shadowing
 
@@ -94,3 +96,4 @@ var a = 10;
   let a = 20;
 }
 ```
+<img width="1432" alt="Screenshot 2025-05-06 at 01 40 07" src="https://github.com/user-attachments/assets/f71ef265-01d4-405c-912a-4292a4aef042" />
