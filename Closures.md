@@ -79,3 +79,12 @@ z(); // 100, 20
 ```
 
 <img width="1432" alt="Screenshot 2025-05-06 at 02 13 45" src="https://github.com/user-attachments/assets/04d6a42c-3da9-4672-b5a2-c6e6112d9caf" />
+
+### Uses of closures
+- Module design pattern
+- currying
+- functions like once
+- memoize
+- naintaining state in async world
+- setTimeouts
+- iterators
