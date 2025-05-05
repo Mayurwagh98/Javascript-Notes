@@ -34,6 +34,8 @@ console.log(a); // 10
 console.log(b); // reference error => as b is in block scope it throws Reference error as b is not defined
 console.log(c); // as error is thorwn JS wont run further, c wont be printed
 ```
+<img width="1432" alt="Screenshot 2025-05-06 at 01 36 44" src="https://github.com/user-attachments/assets/78bb6803-6ff7-4010-983b-b486485e1a60" />
+<img width="1432" alt="Screenshot 2025-05-06 at 01 37 10" src="https://github.com/user-attachments/assets/d3e34087-dfc6-4a88-be32-654f35048a9b" />
 
 ### Shadowing
 
