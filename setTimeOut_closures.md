@@ -18,6 +18,7 @@ x()
 - by the time `setTimeout` gets time to execute the value of `i` is already 6
 - and as `i` is declared using `var` it stays in global scope and closure remembers it's reference, so it prints `6` five times
 
+### Solution
 - to solve the problem declare `i` using `let` such that for each loop block scope will be created
 - and reference of the `i` will be remembered by closure
 
