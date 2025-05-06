@@ -47,6 +47,55 @@ function counter() {
 counter()();
 ```
 
+- interesting behaviour
+
+```js
+function counter() {
+  var count = 0;
+  return function increment() {
+    count++;
+
+    console.log(count);
+  };
+}
+
+counter()(); // 1
+counter()(); // 1
+counter()(); // 1
+
+// Each time you call counter(), a new function is created with its own separate count variable, initialized to 0.
+
+var inc1 = counter(); // count = 0
+inc1(); // prints 1
+
+var inc2 = counter(); // count = 0
+inc2(); // prints 1
+
+var inc3 = counter(); // count = 0
+inc3(); // prints 1
+```
+
+- but if you do
+
+```js
+function counter() {
+  var count = 0;
+  return function increment() {
+    count++;
+
+    console.log(count);
+  };
+}
+
+var b = counter();
+b(); // 1
+b(); // 2
+b(); // 3
+
+// you're calling counter() only once, and saving the inner increment function (which closes over the same count) in variable b.
+// All calls to b() share and modify the same count variable inside the closure.
+```
+
 - another advantage of closure is that we can use same function/closure to create another one
 
 ```js

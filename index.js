@@ -1,14 +1,18 @@
-function x() {
-  for (let i = 1; i <= 5; i++) {
-    function closure(i) {
-      setTimeout(function () {
-        console.log(i);
-      }, i * 1000);
-    }
-    closure(i);
-  }
+function Counter() {
+  var count = 0;
 
-  console.log("settimeout and closures");
+  this.incrementCounter = function () {
+    count++;
+    console.log(count);
+  };
+
+  this.decrementCounter = function () {
+    count--;
+    console.log(count);
+  };
 }
 
-x();
+var counter1 = new Counter();
+
+counter1.incrementCounter();
+counter1.decrementCounter();
