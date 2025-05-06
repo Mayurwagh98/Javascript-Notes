@@ -1,5 +1,18 @@
-let a = 10;
+function Counter() {
+  var count = 0;
 
-console.log(a);
+  this.incrementCounter = function () {
+    count++;
+    console.log(count);
+  };
 
-var b = 20;
+  this.decrementCounter = function () {
+    count--;
+    console.log(count);
+  };
+}
+
+var counter1 = new Counter();
+
+counter1.incrementCounter();
+counter1.decrementCounter();
