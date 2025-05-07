@@ -12,3 +12,5 @@
     b. then `AST` which is a syntax parser, will generate the tree from those tokens
 
 <img width="947" alt="Screenshot 2025-05-08 at 01 13 48" src="https://github.com/user-attachments/assets/592d281b-6b0f-4569-95e8-38e6550e9b66" />
+
+<img width="1432" alt="Screenshot 2025-05-08 at 01 16 55" src="https://github.com/user-attachments/assets/38c366c9-ef64-46bd-bd4b-0de3f4764ae4" />
