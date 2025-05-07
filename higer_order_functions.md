@@ -38,6 +38,7 @@ const diameter = function (radius) {
   return 2 * radius;
 };
 
+// this will the calculate method on all the array
 Array.prototype.calculate = function (logic) {
   let output = [];
 
