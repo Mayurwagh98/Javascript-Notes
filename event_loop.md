@@ -14,4 +14,5 @@
 - A new queue comes into the picture which is `microtask queue`
 - this is a priority task queue, if any function is present in this queue, then it will be sent to call stack before callback queue
 
-![Uploading Screenshot 2025-05-07 at 18.51.37.png…]()
+<img width="1322" alt="Screenshot 2025-05-07 at 18 52 15" src="https://github.com/user-attachments/assets/07c8003a-8360-4a1e-96f4-2d5399cfe5fe" />
+
