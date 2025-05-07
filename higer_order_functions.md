@@ -30,10 +30,20 @@ const area = function (radius) {
   return Math.PI * radius * radius;
 };
 
-// this will the calculate method on all the array
+const circumference = function (radius) {
+  return 2 * Math.PI * radius;
+};
+
+const diameter = function (radius) {
+  return 2 * radius;
+};
+
 Array.prototype.calculate = function (logic) {
   let output = [];
 
+  // here even if I do radius.length & radius[i]
+  // we will get the same output, but it will be a hardcoded way
+  // to make keep it dynamic, we shall use `this`
   for (let i = 0; i < this.length; i++) {
     output.push(logic(this[i]));
   }
@@ -41,4 +51,6 @@ Array.prototype.calculate = function (logic) {
 };
 
 console.log(radius.calculate(area));
+console.log(radius.calculate(circumference));
+console.log(radius.calculate(diameter));
 ```
