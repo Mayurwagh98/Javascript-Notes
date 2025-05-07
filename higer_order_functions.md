@@ -43,7 +43,7 @@ Array.prototype.calculate = function (logic) {
 
   // here even if I do radius.length & radius[i]
   // we will get the same output, but it will be a hardcoded way
-  // to make keep it dynamic, we shall use `this`
+  // to keep it dynamic, we shall use `this`
   for (let i = 0; i < this.length; i++) {
     output.push(logic(this[i]));
   }
