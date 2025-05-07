@@ -6,6 +6,9 @@
 
 - this means that the `arr` inherited the properties of the base object, which is `Object`
 
+<img width="499" alt="Screenshot 2025-05-08 at 03 41 34" src="https://github.com/user-attachments/assets/8ddabd12-7964-4781-b52e-b75e1d12bc68" />
+
+
 - that's why we say everything in js boils down to object
 
 ```js
