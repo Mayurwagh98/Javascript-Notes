@@ -5,6 +5,13 @@
   
   <img width="1331" alt="Screenshot 2025-05-07 at 18 26 45" src="https://github.com/user-attachments/assets/6768401e-efb0-4893-a53b-9c330ff66c68" />
 
-- add event listener example
+### event listener example
   
 <img width="1304" alt="Screenshot 2025-05-07 at 18 38 17" src="https://github.com/user-attachments/assets/2f7ce2c0-7655-4257-a7d9-e97b010c5660" />
+
+### api fetching flow
+- when it comes to api fetching, event loop flow is different
+- A new queue comes into the picture which is `microtask queue`
+- this is a priority task queue, if any function is present in this queue, then it will be sent to call stack before callback queue
+
+![Uploading Screenshot 2025-05-07 at 18.51.37.png…]()
