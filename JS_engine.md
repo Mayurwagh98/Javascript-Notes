@@ -22,3 +22,5 @@
 - which uses `Interpreter (Ignition interpreter)` & `Compiler (Turbofan compiler)` both
 - Interpreter: parsed code to low level machine code, which can be understand by machine
 - Complier: complies the interpreted code and optimizes it
+
+  <img width="725" alt="Screenshot 2025-05-08 at 01 32 22" src="https://github.com/user-attachments/assets/86cb7aa7-882c-4596-a8cc-d955fcdfabf7" />
