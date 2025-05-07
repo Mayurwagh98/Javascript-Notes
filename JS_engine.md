@@ -19,4 +19,6 @@
 
 - once the parsing phase done the code is then gets compile
 - JS engine uses JIT (just in time) compilation
-- which uses `Interpreter` & `Compiler` both
+- which uses `Interpreter (Ignition interpreter)` & `Compiler (Turbofan compiler)` both
+- Interpreter: parsed code to low level machine code, which can be understand by machine
+- Complier: complies the interpreted code and optimizes it
