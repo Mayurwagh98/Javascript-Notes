@@ -6,5 +6,5 @@
   <img width="1331" alt="Screenshot 2025-05-07 at 18 26 45" src="https://github.com/user-attachments/assets/6768401e-efb0-4893-a53b-9c330ff66c68" />
 
 - add event listener example
-
-<img width="1314" alt="Screenshot 2025-05-07 at 18 32 01" src="https://github.com/user-attachments/assets/8680472b-ed78-45aa-a7e7-9855e5a6525b" />
+  
+<img width="1304" alt="Screenshot 2025-05-07 at 18 38 17" src="https://github.com/user-attachments/assets/2f7ce2c0-7655-4257-a7d9-e97b010c5660" />
