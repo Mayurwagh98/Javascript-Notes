@@ -1,18 +1,16 @@
-function Counter() {
-  var count = 0;
+const radius = [1, 3, 4, 5];
 
-  this.incrementCounter = function () {
-    count++;
-    console.log(count);
-  };
+const area = function (radius) {
+  return Math.PI * radius * radius;
+};
 
-  this.decrementCounter = function () {
-    count--;
-    console.log(count);
-  };
-}
+Array.prototype.calculate = function (logic) {
+  let output = [];
 
-var counter1 = new Counter();
+  for (let i = 0; i < this.length; i++) {
+    output.push(logic(this[i]));
+  }
+  return output;
+};
 
-counter1.incrementCounter();
-counter1.decrementCounter();
+console.log(radius.calculate(area));
