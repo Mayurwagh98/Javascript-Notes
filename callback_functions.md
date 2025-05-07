@@ -51,3 +51,7 @@ attachEventListeners();
 ```
 
 ### grabage collection & remove event listeners
+
+- when we event listeners and closures the function remembers the reference of the variables, they are not removed from the memory
+- and this may lead to memory leak
+- to avoid this, we have to remove the event listeners added
