@@ -54,3 +54,13 @@ promise
     return updateWallte(paymentInfo);
   });
 ```
+
+- new arrow function way
+
+```js
+const promise = createOrder(cart);
+promise
+  .then((orderId) => proceedPayment(orderId))
+  .then((paymentInfo) => showOrderSummary(paymentInfo))
+  .then((paymentInfo) => updateWallte(paymentInfo));
+```
