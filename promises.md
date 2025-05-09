@@ -64,3 +64,58 @@ promise
   .then((paymentInfo) => showOrderSummary(paymentInfo))
   .then((paymentInfo) => updateWallte(paymentInfo));
 ```
+
+### creating our own promise
+
+- if promise is resolved, we call the `resolve` function
+- if promise is rejected, we call the `reject` function
+- `Note: Its important to return the new promise from the callback function in the then method or else the promise chain will be broken `
+- here `catch` is being attached at the end of the promise chain
+- so if any error occurs the chain will be broken and the `catch` method will be called
+
+```js
+const cart = ["shoes", "shirts", "pants"];
+
+createOrder()
+  .then(function (orderId) {
+    console.log(orderId);
+    return orderId;
+  })
+  .then((orderId) => {
+    return processPayment(orderId);
+  })
+  .then((paymentInfo) => {
+    console.log(paymentInfo);
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
+
+function createOrder() {
+  const promise = new Promise((resolve, reject) => {
+    if (!validCart(cart)) {
+      const err = new Error("cart is empty");
+      reject(err);
+    } else {
+      const orderId = 123;
+      resolve(orderId);
+    }
+  });
+  return promise;
+}
+function processPayment(orderId) {
+  const promise = new Promise((resolve, reject) => {
+    if (!orderId) {
+      const err = new Error("orderId is empty");
+      reject(err);
+    } else {
+      resolve("payment done");
+    }
+  });
+  return promise;
+}
+
+function validCart(cart) {
+  return true;
+}
+```
