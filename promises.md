@@ -32,3 +32,25 @@ promise.then(function (orderId) {
   proceedPayment(orderId);
 });
 ```
+
+### promise chaining
+
+- promise chaining is a way to chain multiple promises together
+- this is done by using the `then` method
+- the `then` method returns a new promise
+- `Note: Its important to return the new promise from the callback function in the then method or else the promise chain will be broken `
+
+```js
+const promise = createOrder(cart);
+
+promise
+  .then(function (orderId) {
+    return proceedPayment(orderId);
+  })
+  .then(function (paymentInfo) {
+    return showOrderSummary(paymentInfo);
+  })
+  .then(function (paymentInfo) {
+    return updateWallte(paymentInfo);
+  });
+```
