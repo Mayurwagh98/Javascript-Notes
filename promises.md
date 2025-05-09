@@ -119,6 +119,8 @@ function validCart(cart) {
   return true;
 }
 ```
+<img width="508" alt="Screenshot 2025-05-10 at 02 59 25" src="https://github.com/user-attachments/assets/ae14ce42-f1cb-4f04-bffd-da27dd5b2aaf" />
+
 
 - if we want that rest of the chain to run even if one of the promises is rejected we can use the `catch` method as below
 
@@ -171,3 +173,5 @@ function validCart(cart) {
   return false;
 }
 ```
+<img width="573" alt="Screenshot 2025-05-10 at 03 00 06" src="https://github.com/user-attachments/assets/16529c36-68fb-40b8-9954-506e62ab76c7" />
+
