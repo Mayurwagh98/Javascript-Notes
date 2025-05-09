@@ -15,3 +15,11 @@ api.createOrder(cart, function () {
   });
 });
 ```
+
+### Inversion of control
+
+- as in the ablove example we can see that the next callback will be called once the current one is resolved
+
+- due to this we are not sure when the next callback will be called
+- this is called inversion of control
+- this is the reason why we need to use promises
