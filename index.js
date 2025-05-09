@@ -13,6 +13,9 @@ createOrder()
   })
   .catch((err) => {
     console.log(err.message);
+  })
+  .then(() => {
+    console.log("this will be called even if any chain breaks");
   });
 
 function createOrder() {
@@ -40,5 +43,5 @@ function processPayment(orderId) {
 }
 
 function validCart(cart) {
-  return true;
+  return false;
 }
