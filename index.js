@@ -1,29 +1,15 @@
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    // resolve("p1 resolved");
-    reject("p1 rejected");
-  }, 3000);
-});
+const API_URl = "https://api.github.com/users/Mayurwagh98";
 
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    // resolve("p2 resolved");
-    reject("p2 rejected");
-  }, 2000);
-});
+async function handlePromise() {
+  try {
+    const data = await fetch(API_URl);
 
-const p3 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    // resolve("p3 resolved");
-    reject("p3 rejected");
-  }, 3000);
-});
+    const jsonResponse = await data.json();
 
-Promise.any([p1, p2, p3])
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((error) => {
-    console.error(error);
-    console.error(error.errors);
-  });
+    console.log(jsonResponse);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+handlePromise();
