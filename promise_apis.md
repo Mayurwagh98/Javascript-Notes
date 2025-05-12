@@ -28,6 +28,11 @@ Promise.all([p1, p2, p3]).then((res) => {
 
 <img width="738" alt="Screenshot 2025-05-12 at 17 00 31" src="https://github.com/user-attachments/assets/f8ba617f-b912-4699-b68e-f29364daff23" />
 
+<img width="506" alt="Screenshot 2025-05-12 at 17 23 14" src="https://github.com/user-attachments/assets/8a0181d5-3f8d-4ec9-87ab-14fe81c32636" />
+
+
+
+
 - fail case
 
   <img width="658" alt="Screenshot 2025-05-12 at 17 03 09" src="https://github.com/user-attachments/assets/28fb4b5f-5382-493c-8535-84e571ad0e43" />
