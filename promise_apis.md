@@ -164,6 +164,8 @@ Promise.allSettled([p1, p2, p3])
 
 <img width="875" alt="Screenshot 2025-05-12 at 17 06 44" src="https://github.com/user-attachments/assets/077288f4-1439-49de-aaff-afad6bb84ef9" />
 
+<img width="432" alt="Screenshot 2025-05-12 at 19 18 49" src="https://github.com/user-attachments/assets/acfa9d40-a0f7-448c-a718-a21c8bb857d8" />
+
 ### Promise.race
 
 - success case
