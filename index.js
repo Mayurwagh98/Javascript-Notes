@@ -12,10 +12,15 @@ const p2 = new Promise((resolve, reject) => {
 
 const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("p3 resolved");
+    // resolved("p3 resolved");
+    reject("p3 rejected");
   }, 3000);
 });
 
-Promise.all([p1, p2, p3]).then((res) => {
-  console.log(res);
-});
+Promise.all([p1, p2, p3])
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });

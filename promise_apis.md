@@ -30,6 +30,34 @@ Promise.all([p1, p2, p3]).then((res) => {
 
 - fail case
 
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p1 resolved");
+  }, 1000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p2 resolved");
+  }, 2000);
+});
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("p3 rejected");
+  }, 3000);
+});
+
+Promise.all([p1, p2, p3])
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
   <img width="658" alt="Screenshot 2025-05-12 at 17 03 09" src="https://github.com/user-attachments/assets/28fb4b5f-5382-493c-8535-84e571ad0e43" />
 
 ### Promise.allSetteled
