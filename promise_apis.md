@@ -199,8 +199,10 @@ Promise.race([p1, p2, p3])
     console.error(error);
   });
 ```
+<img width="482" alt="Screenshot 2025-05-12 at 19 20 39" src="https://github.com/user-attachments/assets/1358c66d-1f2f-414a-b00b-f1e3b1172ed0" />
 
-  <img width="827" alt="Screenshot 2025-05-12 at 17 09 17" src="https://github.com/user-attachments/assets/66bfbcf2-a869-4a4b-a0d0-891127cbd90c" />
+
+<img width="827" alt="Screenshot 2025-05-12 at 17 09 17" src="https://github.com/user-attachments/assets/66bfbcf2-a869-4a4b-a0d0-891127cbd90c" />
 
 - fail case
   <img width="942" alt="Screenshot 2025-05-12 at 17 10 42" src="https://github.com/user-attachments/assets/6a06fd62-b840-46b9-b7e7-ccbe2481d456" />
