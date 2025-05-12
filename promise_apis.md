@@ -99,6 +99,8 @@ Promise.allSettled([p1, p2, p3])
 
 <img width="570" alt="Screenshot 2025-05-12 at 17 05 06" src="https://github.com/user-attachments/assets/ed0d8999-f53c-461d-9f22-a3343096f35c" />
 
+<img width="489" alt="Screenshot 2025-05-12 at 19 16 15" src="https://github.com/user-attachments/assets/40ed310c-e274-4f51-8e50-463135c85d9f" />
+
 - fail case
 
 <img width="875" alt="Screenshot 2025-05-12 at 17 06 44" src="https://github.com/user-attachments/assets/077288f4-1439-49de-aaff-afad6bb84ef9" />
