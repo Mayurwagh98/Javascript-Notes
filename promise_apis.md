@@ -199,8 +199,8 @@ Promise.race([p1, p2, p3])
     console.error(error);
   });
 ```
-<img width="482" alt="Screenshot 2025-05-12 at 19 20 39" src="https://github.com/user-attachments/assets/1358c66d-1f2f-414a-b00b-f1e3b1172ed0" />
 
+<img width="482" alt="Screenshot 2025-05-12 at 19 20 39" src="https://github.com/user-attachments/assets/1358c66d-1f2f-414a-b00b-f1e3b1172ed0" />
 
 <img width="827" alt="Screenshot 2025-05-12 at 17 09 17" src="https://github.com/user-attachments/assets/66bfbcf2-a869-4a4b-a0d0-891127cbd90c" />
 
@@ -242,6 +242,38 @@ Promise.race([p1, p2, p3])
 ### Promise.any
 
 - success case
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p1 resolved");
+    // reject("p1 rejected");
+  }, 3000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p2 resolved");
+    // reject("p2 rejected");
+  }, 2000);
+});
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p3 resolved");
+    // reject("p3 rejected");
+  }, 3000);
+});
+
+Promise.any([p1, p2, p3])
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
   <img width="708" alt="Screenshot 2025-05-12 at 17 13 58" src="https://github.com/user-attachments/assets/9d510533-07f9-4e4e-a86c-a54ae33e4e9a" />
 
 - fail case
