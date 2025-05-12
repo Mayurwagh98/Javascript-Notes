@@ -275,8 +275,9 @@ Promise.any([p1, p2, p3])
     console.error(error);
   });
 ```
+<img width="486" alt="Screenshot 2025-05-12 at 19 25 10" src="https://github.com/user-attachments/assets/420f0ea1-401b-4f34-bdf8-98ad836c0b48" />
 
-  <img width="708" alt="Screenshot 2025-05-12 at 17 13 58" src="https://github.com/user-attachments/assets/9d510533-07f9-4e4e-a86c-a54ae33e4e9a" />
+<img width="708" alt="Screenshot 2025-05-12 at 17 13 58" src="https://github.com/user-attachments/assets/9d510533-07f9-4e4e-a86c-a54ae33e4e9a" />
 
 - fail case
   <img width="718" alt="Screenshot 2025-05-12 at 17 15 47" src="https://github.com/user-attachments/assets/3374ecab-cd36-449e-91c5-7a125ad57e90" />
