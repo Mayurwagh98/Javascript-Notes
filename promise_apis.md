@@ -237,7 +237,9 @@ Promise.race([p1, p2, p3])
   });
 ```
 
-  <img width="942" alt="Screenshot 2025-05-12 at 17 10 42" src="https://github.com/user-attachments/assets/6a06fd62-b840-46b9-b7e7-ccbe2481d456" />
+<img width="942" alt="Screenshot 2025-05-12 at 17 10 42" src="https://github.com/user-attachments/assets/6a06fd62-b840-46b9-b7e7-ccbe2481d456" />
+
+<img width="496" alt="Screenshot 2025-05-12 at 19 22 49" src="https://github.com/user-attachments/assets/eb27f679-08c9-4ffc-a3ea-94359a177726" />
 
 ### Promise.any
 
