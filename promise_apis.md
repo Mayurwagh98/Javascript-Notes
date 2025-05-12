@@ -30,9 +30,6 @@ Promise.all([p1, p2, p3]).then((res) => {
 
 <img width="506" alt="Screenshot 2025-05-12 at 17 23 14" src="https://github.com/user-attachments/assets/8a0181d5-3f8d-4ec9-87ab-14fe81c32636" />
 
-
-
-
 - fail case
 
 ```js
@@ -64,6 +61,9 @@ Promise.all([p1, p2, p3])
 ```
 
   <img width="658" alt="Screenshot 2025-05-12 at 17 03 09" src="https://github.com/user-attachments/assets/28fb4b5f-5382-493c-8535-84e571ad0e43" />
+
+<img width="524" alt="Screenshot 2025-05-12 at 17 27 22" src="https://github.com/user-attachments/assets/7fe6c602-9861-4d00-810c-f7c66daf7192" />
+
 
 ### Promise.allSetteled
 
