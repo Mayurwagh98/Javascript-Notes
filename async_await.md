@@ -9,10 +9,6 @@
 - in the below case we are not returning a promise, but as we are using async keyword, it returns a promise.
 
 ```js
-const p = new Promise((resolve, reject) => {
-  resolve("promise 1 resolved");
-});
-
 async function getData() {
   return "javascript";
 }
@@ -24,5 +20,26 @@ console.log(dataPromise);
 output:
 
 ```js
-`<Promise {<fulfilled>: 'javascript'}>`;
+`Promise {<fulfilled>: 'javascript'}`;
+```
+
+- now let's return real promise
+
+```js
+const p = new Promise((resolve, reject) => {
+  resolve("promise 1 resolved");
+});
+
+async function getData() {
+  return p;
+}
+
+const dataPromise = getData();
+console.log(dataPromise);
+```
+
+output:
+
+```js
+`Promise {<pending>}`;
 ```

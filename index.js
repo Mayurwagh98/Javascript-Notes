@@ -3,7 +3,7 @@ const p = new Promise((resolve, reject) => {
 });
 
 async function getData() {
-  return "javascript";
+  return p;
 }
 
 const dataPromise = getData();
