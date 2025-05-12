@@ -6,14 +6,15 @@ const p1 = new Promise((resolve, reject) => {
 
 const p2 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("p2 resolved");
+    // resolve("p2 resolved");
+    reject("p2 rejected");
   }, 2000);
 });
 
 const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("p3 resolved");
-    // reject("p3 rejected");
+    // resolve("p3 resolved");
+    reject("p3 rejected");
   }, 3000);
 });
 
