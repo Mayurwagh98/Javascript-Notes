@@ -1,13 +1,13 @@
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("promise 1 resolved");
-  }, 10000);
+  }, 5000);
 });
 
 const p2 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("promise 2 resolved");
-  }, 5000);
+  }, 10000);
 });
 
 async function handlePromise() {
