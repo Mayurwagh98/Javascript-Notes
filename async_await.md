@@ -64,7 +64,7 @@ handlePromise();
 
 - in the below example as 1st promise will be taking 10 secs to resolve, so 2nd promise will be waiting for 10 secs to resolve.
 - by wait here JS won't wait for 10 secs, as soon as it encounters `await p1`
-- it will suspend the execution of the function and wait for the result of the promise.
+- it will suspend (moved out of the call stack) the execution of the function and wait for the result of the promise.
 - once the promise is resolved, it will resume the execution of the function.
 - by that time 2nd promise will be resolved.
 - so both will be consoled at the same time.
@@ -125,6 +125,31 @@ async function handlePromise() {
 
   const val2 = await p2;
   console.log(val2);
+}
+
+handlePromise();
+```
+
+### real world example
+
+- in the below example we are using async and await to fetch data from an API.
+- we are using `fetch` API to fetch data from an API.
+- `fetch` API returns a promise.
+- here we are using `await` for `data.json` cause fetch returns a promise.
+
+```js
+const API_URl = "https://api.github.com/users/Mayurwagh98";
+
+async function handlePromise() {
+  try {
+    const data = await fetch(API_URl);
+
+    const jsonResponse = await data.json();
+
+    console.log(jsonResponse);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 handlePromise();
