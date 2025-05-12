@@ -1,47 +1,29 @@
-const cart = ["shoes", "shirts", "pants"];
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("p1 resolved");
+    reject("p1 rejected");
+  }, 3000);
+});
 
-createOrder()
-  .then(function (orderId) {
-    console.log(orderId);
-    return orderId;
-  })
-  .then((orderId) => {
-    return processPayment(orderId);
-  })
-  .then((paymentInfo) => {
-    console.log(paymentInfo);
-  })
-  .catch((err) => {
-    console.log(err.message);
-  })
-  .then(() => {
-    console.log("this will be called even if any chain breaks");
-  });
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("p2 resolved");
+    reject("p2 rejected");
+  }, 2000);
+});
 
-function createOrder() {
-  const promise = new Promise((resolve, reject) => {
-    if (!validCart(cart)) {
-      const err = new Error("cart is empty");
-      reject(err);
-    } else {
-      const orderId = 123;
-      resolve(orderId);
-    }
-  });
-  return promise;
-}
-function processPayment(orderId) {
-  const promise = new Promise((resolve, reject) => {
-    if (!orderId) {
-      const err = new Error("orderId is empty");
-      reject(err);
-    } else {
-      resolve("payment done");
-    }
-  });
-  return promise;
-}
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("p3 resolved");
+    reject("p3 rejected");
+  }, 3000);
+});
 
-function validCart(cart) {
-  return false;
-}
+Promise.any([p1, p2, p3])
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+    console.error(error.errors);
+  });
