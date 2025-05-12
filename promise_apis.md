@@ -350,3 +350,8 @@ Promise.any([p1, p2, p3])
 <img width="718" alt="Screenshot 2025-05-12 at 17 15 47" src="https://github.com/user-attachments/assets/3374ecab-cd36-449e-91c5-7a125ad57e90" />
 
 <img width="701" alt="Screenshot 2025-05-12 at 17 17 03" src="https://github.com/user-attachments/assets/9d15d0df-a58a-41e8-b59b-b7bfc854bd04" />
+
+### lingo for `Setteled` key word
+
+<img width="837" alt="Screenshot 2025-05-12 at 19 30 49" src="https://github.com/user-attachments/assets/3e7dcc6d-709b-4977-bd4b-577fe47e5011" />
+
