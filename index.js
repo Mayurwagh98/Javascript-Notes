@@ -18,7 +18,7 @@ const p3 = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-Promise.allSettled([p1, p2, p3])
+Promise.race([p1, p2, p3])
   .then((res) => {
     console.log(res);
   })

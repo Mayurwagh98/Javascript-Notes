@@ -169,6 +169,37 @@ Promise.allSettled([p1, p2, p3])
 ### Promise.race
 
 - success case
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p1 resolved");
+  }, 1000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("p2 resolved");
+    reject("p2 rejected");
+  }, 2000);
+});
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("p3 resolved");
+    reject("p3 rejected");
+  }, 3000);
+});
+
+Promise.race([p1, p2, p3])
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
   <img width="827" alt="Screenshot 2025-05-12 at 17 09 17" src="https://github.com/user-attachments/assets/66bfbcf2-a869-4a4b-a0d0-891127cbd90c" />
 
 - fail case
