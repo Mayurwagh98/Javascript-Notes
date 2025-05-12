@@ -60,14 +60,42 @@ Promise.all([p1, p2, p3])
   });
 ```
 
-  <img width="658" alt="Screenshot 2025-05-12 at 17 03 09" src="https://github.com/user-attachments/assets/28fb4b5f-5382-493c-8535-84e571ad0e43" />
+<img width="658" alt="Screenshot 2025-05-12 at 17 03 09" src="https://github.com/user-attachments/assets/28fb4b5f-5382-493c-8535-84e571ad0e43" />
 
 <img width="524" alt="Screenshot 2025-05-12 at 17 27 22" src="https://github.com/user-attachments/assets/7fe6c602-9861-4d00-810c-f7c66daf7192" />
-
 
 ### Promise.allSetteled
 
 - success case
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p1 resolved");
+  }, 1000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p2 resolved");
+  }, 2000);
+});
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("p3 resolved");
+    // reject("p3 rejected");
+  }, 3000);
+});
+
+Promise.allSettled([p1, p2, p3])
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
 
 <img width="570" alt="Screenshot 2025-05-12 at 17 05 06" src="https://github.com/user-attachments/assets/ed0d8999-f53c-461d-9f22-a3343096f35c" />
 

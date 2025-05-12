@@ -12,12 +12,12 @@ const p2 = new Promise((resolve, reject) => {
 
 const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    // resolved("p3 resolved");
-    reject("p3 rejected");
+    resolve("p3 resolved");
+    // reject("p3 rejected");
   }, 3000);
 });
 
-Promise.all([p1, p2, p3])
+Promise.allSettled([p1, p2, p3])
   .then((res) => {
     console.log(res);
   })
