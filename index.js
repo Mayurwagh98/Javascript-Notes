@@ -1,18 +1,24 @@
-const obj = {
-  name: "mayur",
-  lastname: "wagh",
-};
+document.querySelector("#grandParent").addEventListener(
+  "click",
+  (e) => {
+    e.stopPropagation();
+    console.log("Grand Parent Clicked");
+  },
+  true
+);
 
-const printFullName = function (city, state) {
-  console.log(
-    this.name + " " + this.lastname + " lives in " + city + " " + state
-  );
-};
+document.querySelector("#parent").addEventListener(
+  "click",
+  () => {
+    console.log("Parent Clicked");
+  },
+  true
+);
 
-const obj2 = {
-  name: "testing",
-  lastname: "call",
-};
-
-const newPrintVal = printFullName.bind(obj, "pune", "maharashtra");
-newPrintVal();
+document.querySelector("#child").addEventListener(
+  "click",
+  () => {
+    console.log("Child Clicked");
+  },
+  true
+);
