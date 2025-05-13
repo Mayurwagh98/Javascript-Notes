@@ -45,3 +45,52 @@ document.querySelector("#child").addEventListener("click", () => {
   console.log("Child Clicked");
 });
 ```
+
+Output:
+
+```js
+Child Clicked
+Parent Clicked
+Grand Parent Clicked
+```
+
+### event capturing / trickling
+
+- Event capturing is a concept in the DOM (Document Object Model) where events "trickle down" from the outermost element (usually the document body) to the innermost element (the target element) in the DOM tree.
+- When an event occurs on an element, it first triggers the event listeners attached to the document body, and then it "trickles down" to the child elements, triggering their event listeners as well.
+- This process continues until it reaches the target element or until the event is explicitly stopped.
+- In the below example, when we click grand parent div, the event will first trigger the event listener attached to the document body, then it will trickle down to the child div, triggering the event listener attached to the child div, and finally it will trickle down to the grand parent div, triggering the event listener attached to the grand parent div.
+
+```js
+document.querySelector("#grandParent").addEventListener(
+  "click",
+  () => {
+    console.log("Grand Parent Clicked");
+  },
+  true
+);
+
+document.querySelector("#parent").addEventListener(
+  "click",
+  () => {
+    console.log("Parent Clicked");
+  },
+  true
+);
+
+document.querySelector("#child").addEventListener(
+  "click",
+  () => {
+    console.log("Child Clicked");
+  },
+  true
+);
+```
+
+Output:
+
+```js
+Grand Parent Clicked
+Parent Clicked
+Child Clicked
+```
