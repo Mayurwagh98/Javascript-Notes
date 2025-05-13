@@ -161,3 +161,13 @@ obj.x(); // global object => window
 ```
 
 ### this inside DOM
+
+- here `this` keyword will reference to the DOM/HTML element
+- same behaviour will be in non strict mode as well
+
+```js
+document.addEventListener("click", function () {
+  console.log(this);
+});
+
+```
