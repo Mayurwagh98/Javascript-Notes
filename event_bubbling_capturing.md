@@ -1,10 +1,7 @@
-<!DOCTYPE html>
+### event bubbling
+
+```html
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
   <style>
     div {
       min-width: 100px;
@@ -28,3 +25,18 @@
   </body>
 </html>
 <script src="./index.js"></script>
+```
+
+```js
+document.querySelector("#grandParent").addEventListener("click", () => {
+  console.log("Grand Parent Clicked");
+});
+
+document.querySelector("#parent").addEventListener("click", () => {
+  console.log("Parent Clicked");
+});
+
+document.querySelector("#child").addEventListener("click", () => {
+  console.log("Child Clicked");
+});
+```
