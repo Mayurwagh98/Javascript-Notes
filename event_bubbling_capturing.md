@@ -106,6 +106,7 @@ Child Clicked
 
 - To stop event bubbling and capturing in JavaScript, you can use the `stopPropagation()` method.
 - In the below example, when we click on child div, the event won't propogate to parent or grandparent div.
+- In this example we have stopped the event propagation from bubbling up to the parent div.
 
 ```js
 document.querySelector("#grandParent").addEventListener(
@@ -133,7 +134,9 @@ document.querySelector("#child").addEventListener(
   false
 );
 ```
+
 Output:
+
 ```js
 Child Clicked
 ```
