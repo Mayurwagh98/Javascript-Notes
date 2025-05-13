@@ -166,9 +166,9 @@ obj.x(); // global object => window
 - same behaviour will be in non strict mode as well
 
 ```js
-document.addEventListener("click", function () {
+document.getElementById("btn").addEventListener("click", function () {
   console.log(this);
-});
+}); // <button id="btn">Click me</button>
 ```
 
 - if used arrow callback function
@@ -179,7 +179,7 @@ document.addEventListener("click", function () {
 ```js
 "use strict";
 
-document.addEventListener("click", () => {
+document.getElementById("btn").addEventListener("click", () => {
   console.log(this);
-});
+}); // global object => window
 ```
