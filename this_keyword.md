@@ -49,7 +49,55 @@ window.x(); // global object => window
 
 ### this inside a object's method
 
+- here `this` keyword will reference to the object
+- same behaviour will be in non strict mode as well
+
+```js
+const obj = {
+  name: "mayur",
+  x: function () {
+    console.log(this);
+  },
+};
+
+obj.x(); // {name:'mayur', x: ƒ}
+```
+
+```js
+"use strict";
+
+const obj = {
+  name: "mayur",
+  x: function () {
+    console.log(this.name);
+  },
+};
+
+obj.x(); // mayur
+```
+
 ### call, apply, bind methods (shating methods)
+
+- call method
+- same behaviour will be in non strict mode as well
+
+```js
+"use strict";
+
+const obj = {
+  name: "mayur",
+  x: function () {
+    console.log(this.name);
+  },
+};
+
+const obj2 = {
+  name: "wagh",
+};
+
+obj.x();
+obj.x.call(obj2); // wagh
+```
 
 ### this inside arrow function
 
