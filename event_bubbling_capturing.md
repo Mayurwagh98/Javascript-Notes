@@ -1,3 +1,5 @@
+<img width="1432" alt="Screenshot 2025-05-14 at 01 25 49" src="https://github.com/user-attachments/assets/e5dc4291-99c2-4e58-a902-dcb5ac6b8794" />
+
 ### event bubbling
 
 - Event bubbling is a concept in the DOM (Document Object Model) where events "bubble" up from the innermost element (the target element) to the outermost element (usually the document body) in the DOM tree.
