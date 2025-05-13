@@ -5,7 +5,7 @@ const obj = {
 
 const printFullName = function (city, state) {
   console.log(
-    this.name + " " + this.lastname + "lives in " + city + " " + state
+    this.name + " " + this.lastname + " lives in " + city + " " + state
   );
 };
 
@@ -14,5 +14,5 @@ const obj2 = {
   lastname: "call",
 };
 
-printFullName.call(obj, "nasik", "maharashtra");
-printFullName.call(obj2, "mumbai", "delhi");
+printFullName.apply(obj, ["panvel", "odhisa"]);
+printFullName.apply(obj2, ["lonavla", "maharashtra"]);
