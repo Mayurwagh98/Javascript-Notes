@@ -1,9 +1,10 @@
 document.querySelector("#grandParent").addEventListener(
   "click",
-  () => {
+  (e) => {
+    e.stopPropagation();
     console.log("Grand Parent Clicked");
   },
-  false
+  true
 );
 
 document.querySelector("#parent").addEventListener(
@@ -11,14 +12,13 @@ document.querySelector("#parent").addEventListener(
   () => {
     console.log("Parent Clicked");
   },
-  false
+  true
 );
 
 document.querySelector("#child").addEventListener(
   "click",
-  (e) => {
-    e.stopPropagation();
+  () => {
     console.log("Child Clicked");
   },
-  false
+  true
 );

@@ -138,5 +138,52 @@ document.querySelector("#child").addEventListener(
 Output:
 
 ```js
+// with stopPropagation()
+Child Clicked
+
+// without stopPropagation()
+Child Clicked
+Parent Clicked
+Grand Parent Clicked
+```
+
+- In this example we have stopped the event propagation from capturing/trickling up to the child div.
+
+```js
+document.querySelector("#grandParent").addEventListener(
+  "click",
+  (e) => {
+    e.stopPropagation();
+    console.log("Grand Parent Clicked");
+  },
+  true
+);
+
+document.querySelector("#parent").addEventListener(
+  "click",
+  () => {
+    console.log("Parent Clicked");
+  },
+  true
+);
+
+document.querySelector("#child").addEventListener(
+  "click",
+  () => {
+    console.log("Child Clicked");
+  },
+  true
+);
+```
+
+Output:
+
+```js
+// with stopPropagation()
+Grand Parent Clicked
+
+// without stopPropagation()
+Grand Parent Clicked
+Parent Clicked
 Child Clicked
 ```
