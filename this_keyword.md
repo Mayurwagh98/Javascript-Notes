@@ -173,6 +173,7 @@ document.addEventListener("click", function () {
 
 - if used arrow callback function
 - it will reference to the global object
+- as parent of `document` is global object
 - same behaviour will be in non strict mode as well
 
 ```js
