@@ -20,7 +20,6 @@ x(); // global object => window
 ```
 
 - strict mode
-- how we are calling the function, based on that also this value will change
 
 ```js
 function x() {
@@ -28,13 +27,25 @@ function x() {
 }
 x(); // undefined
 
-window.x() // gloval object => window
+window.x(); // global object => window
 ```
-
 
 ### this in non strict mode - (this substitution)
 
+- if the value pf `this` keyword is undefined or null,
+- this keyword will be replaced with global object
+- only in non strict mode
+
 ### this value depends on how this is called (window)
+
+```js
+function x() {
+  console.log(this);
+}
+x(); // undefined
+
+window.x(); // global object => window
+```
 
 ### this inside a object's method
 

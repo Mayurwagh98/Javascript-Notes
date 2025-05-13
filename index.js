@@ -1,8 +1,5 @@
 "use strict"
 
-function x(){
-  console.log(this)
+const obj = {
+  
 }
-x()
-
-window.x()
