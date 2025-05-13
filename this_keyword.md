@@ -101,6 +101,63 @@ obj.x.call(obj2); // wagh
 
 ### this inside arrow function
 
+- arrow function does not have their own `this` keyword
+- it will reference to the parent's `this` keyword
+- in this case`this` keyword will reference to the global object
+- as parent of `obj` is global object
+- same behaviour will be in non strict mode as well
+
+```js
+"use strict";
+
+const obj = {
+  name: "mayur",
+  x: () => {
+    console.log(this);
+  },
+};
+
+obj.x();
+```
+
 ### this inside nested arrow function
+
+- as arrow function does not have their own `this` keyword
+- it will reference to the parent's `this` keyword
+- in this case`this` keyword will reference to parent's `this` keyword
+- parent is `x` in lexical scope and its parent is `obj` in lexical scope
+- same behaviour will be in non strict mode as well
+
+```js
+"use strict";
+
+const obj = {
+  name: "mayur",
+  x: function () {
+    const y = () => {
+      console.log(this);
+    };
+    y();
+  },
+};
+
+obj.x(); // {name:'mayur', x: ƒ}
+```
+
+```js
+"use strict";
+
+const obj = {
+  name: "mayur",
+  x: () => {
+    const y = () => {
+      console.log(this);
+    };
+    y();
+  },
+};
+
+obj.x(); // global object => window
+```
 
 ### this inside DOM

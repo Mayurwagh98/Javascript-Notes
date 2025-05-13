@@ -2,8 +2,11 @@
 
 const obj = {
   name: "mayur",
-  x: () => {
-    console.log(this);
+  x: function () {
+    const y = () => {
+      console.log(this);
+    };
+    y();
   },
 };
 
