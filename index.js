@@ -1,5 +1,5 @@
 "use strict";
 
-document.addEventListener("click", function () {
+document.addEventListener("click", () => {
   console.log(this);
 });

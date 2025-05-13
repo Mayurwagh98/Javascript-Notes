@@ -169,5 +169,16 @@ obj.x(); // global object => window
 document.addEventListener("click", function () {
   console.log(this);
 });
+```
 
+- if used arrow callback function
+- it will reference to the global object
+- same behaviour will be in non strict mode as well
+
+```js
+"use strict";
+
+document.addEventListener("click", () => {
+  console.log(this);
+});
 ```
