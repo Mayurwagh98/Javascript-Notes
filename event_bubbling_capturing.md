@@ -94,3 +94,46 @@ Grand Parent Clicked
 Parent Clicked
 Child Clicked
 ```
+
+### why event bubbling and capturing are not good for performance
+
+- Event bubbling and capturing can have a negative impact on performance, especially when dealing with large DOM trees or when there are many event listeners attached to elements.
+- The reason for this is that when an event occurs on an element, it first triggers the event listeners attached to that element, and then it "bubbles up" or "trickles down" to the parent elements, triggering their event listeners as well.
+- This process can be computationally expensive, especially when there are many event listeners attached to elements.
+- Additionally, event bubbling and capturing can cause issues with event propagation, especially when dealing with nested elements that have overlapping event listeners.
+
+### how to stop event bubbling and capturing
+
+- To stop event bubbling and capturing in JavaScript, you can use the `stopPropagation()` method.
+- In the below example, when we click on child div, the event won't propogate to parent or grandparent div.
+
+```js
+document.querySelector("#grandParent").addEventListener(
+  "click",
+  () => {
+    console.log("Grand Parent Clicked");
+  },
+  false
+);
+
+document.querySelector("#parent").addEventListener(
+  "click",
+  () => {
+    console.log("Parent Clicked");
+  },
+  false
+);
+
+document.querySelector("#child").addEventListener(
+  "click",
+  (e) => {
+    e.stopPropagation();
+    console.log("Child Clicked");
+  },
+  false
+);
+```
+Output:
+```js
+Child Clicked
+```
