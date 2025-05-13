@@ -14,5 +14,5 @@ const obj2 = {
   lastname: "call",
 };
 
-printFullName.apply(obj, ["panvel", "odhisa"]);
-printFullName.apply(obj2, ["lonavla", "maharashtra"]);
+const newPrintVal = printFullName.bind(obj, "pune", "maharashtra");
+newPrintVal();

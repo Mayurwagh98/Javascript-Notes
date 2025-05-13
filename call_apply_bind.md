@@ -69,3 +69,30 @@ const obj2 = {
 printFullName.apply(obj, ["panvel", "odhisa"]);
 printFullName.apply(obj2, ["lonavla", "maharashtra"]);
 ```
+
+### bind
+
+- `bind()` method creates a copy of a function with a given this value and arguments provided
+- `bind` returns a new function
+- when we want to use this function later we can use it
+
+```js
+const obj = {
+  name: "mayur",
+  lastname: "wagh",
+};
+
+const printFullName = function (city, state) {
+  console.log(
+    this.name + " " + this.lastname + " lives in " + city + " " + state
+  );
+};
+
+const obj2 = {
+  name: "testing",
+  lastname: "call",
+};
+
+const newPrintVal = printFullName.bind(obj, "pune", "maharashtra");
+newPrintVal(); // testing call lives in pune maharashtra
+```
