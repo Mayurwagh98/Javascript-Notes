@@ -1,3 +1,6 @@
+### normal bind method
+
+```js
 let fullName = {
   firstName: "mayur",
   lastName: "wagh",
@@ -9,3 +12,4 @@ let printName = function () {
 
 const printMyName = printName.bind(fullName);
 printMyName();
+```
