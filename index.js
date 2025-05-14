@@ -1,24 +1,6 @@
-document.querySelector("#grandParent").addEventListener(
-  "click",
-  (e) => {
-    e.stopPropagation();
-    console.log("Grand Parent Clicked");
-  },
-  true
-);
+let multiply = function (x, y) {
+  console.log(x * y);
+};
 
-document.querySelector("#parent").addEventListener(
-  "click",
-  () => {
-    console.log("Parent Clicked");
-  },
-  true
-);
-
-document.querySelector("#child").addEventListener(
-  "click",
-  () => {
-    console.log("Child Clicked");
-  },
-  true
-);
+let multiplyByTwo = multiply.bind(this, 2);
+multiplyByTwo(3);
