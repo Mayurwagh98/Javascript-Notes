@@ -3,9 +3,13 @@ let fullName = {
   lastName: "wagh",
 };
 
-let printName = function () {
-  console.log(this.firstName + " " + this.lastName);
+let printName = function (hometown, state) {
+  console.log(
+    this.firstName + " " + this.lastName + " " + hometown + " " + state
+  );
 };
 
-const printMyName = printName.bind(fullName);
-printMyName();
+// const printMyName = printName.bind(fullName);
+// printMyName();
+
+
