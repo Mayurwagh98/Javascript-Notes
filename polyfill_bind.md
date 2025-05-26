@@ -14,9 +14,9 @@ const printMyName = printName.bind(fullName);
 printMyName();
 ```
 
-```js
-// creating our own bind function
+### creating our own bind function
 
+```js
 Function.prototype.myBind = function (...args) {
   let obj = this; // this will point to the object on which myBind is called
 
